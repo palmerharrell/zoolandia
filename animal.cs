@@ -16,18 +16,36 @@ class Squirrel: Species {
     public virtual string Transportation() {
     return "scurries";
   }
-}
-
-class FlyingSquirrel : Squirrel {
-  public bool FearOfCars {get; set;}
-  public override string Transportation() {
-    return "flies";
+  public Squirrel (string sound) {
+        Noise = sound;
+  }
+  public Squirrel (int adorable) {
+        CutenessLevel = adorable;
+  }
+  public Squirrel (int adorable, string sound) {
+        CutenessLevel = adorable;
+        Noise = sound;
   }
 }
 
-Squirrel nutsy = new Squirrel();
-FlyingSquirrel batman = new FlyingSquirrel();
+//class FlyingSquirrel : Squirrel {
+//  public bool FearOfCars {get; set;}
+//  public override string Transportation() {
+//    return "flies";
+//  }
+//}
+
+Squirrel nutsy = new Squirrel("chatter");
+Squirrel fluffy = new Squirrel(6);
+Squirrel superSquirrel = new Squirrel(4, "chitterchatter");
+// FlyingSquirrel batman = new FlyingSquirrel();
 
 Console.WriteLine(nutsy.Transportation());
-Console.WriteLine(batman.Transportation());
+Console.WriteLine(nutsy.Noise);
+Console.WriteLine(fluffy.CutenessLevel);
+Console.WriteLine(superSquirrel.CutenessLevel);
+Console.WriteLine(superSquirrel.Noise);
+// Console.WriteLine(batman.Transportation());
+
+
 
