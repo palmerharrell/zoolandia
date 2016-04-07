@@ -54,12 +54,20 @@ class Rana : Animal {
   	get { return _color; }
   	set { _color = value; }
   }
+  // Method overriding example
+  public virtual string doSomething() {
+  	return "original value";
+  }
 }
 
 
 // ~~~~~ SPECIES (Genus: Rana) ~~~~~
 class Latastei : Rana {
 	public string speciesName = "Italian Agile Frog";
+	// Method overriding example
+	public override string doSomething() {
+		return "override value";
+	}
 	// Constructor
 	public Latastei (string animalName) {
 		name = animalName;
@@ -328,6 +336,7 @@ Console.WriteLine("Genus: " + marco.genus);
 Console.WriteLine("Species: " + marco.speciesName);
 Console.WriteLine("Legs: " + marco.legs);
 Console.WriteLine("Color: " + marco.color);
+Console.WriteLine("Override test: " + marco.doSomething());
 Console.WriteLine("");
 
 Console.WriteLine("Name: " + robert.name);
@@ -335,6 +344,7 @@ Console.WriteLine("Genus: " + robert.genus);
 Console.WriteLine("Species: " + robert.speciesName);
 Console.WriteLine("Legs: " + robert.legs);
 Console.WriteLine("Color: " + robert.color);
+Console.WriteLine("Override test: " + robert.doSomething());
 Console.WriteLine("");
 
 Console.WriteLine("Name: " + doug.name);
