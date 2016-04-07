@@ -7,6 +7,7 @@ class Equus : Animal {
 	private string _genus = "Equus";
 	private int _legs = 4;
 	private bool _isHybrid;
+	private bool _isFertile = true;
 	public bool isHybrid {
 		get { return _isHybrid; }
 		set { _isHybrid = value; }
@@ -16,6 +17,10 @@ class Equus : Animal {
   }
   public int legs {
     get { return _legs; }
+  }
+  public bool isFertile {
+  	get { return _isFertile; }
+  	set { _isFertile = value; }
   }
 }
 
@@ -52,7 +57,7 @@ class Rana : Animal {
 }
 
 
-// ~~~~~ SPECIES (Genus: Cricetulus) ~~~~~
+// ~~~~~ SPECIES (Genus: Rana) ~~~~~
 class Latastei : Rana {
 	public string speciesName = "Italian Agile Frog";
 	// Constructor
@@ -158,16 +163,27 @@ class Horse : Equus {
 
 class Zebra : Equus {
 	public string speciesName = "Zebra";
-	// CONSTRUCTOR
+	// Constructor
 	public Zebra (string animalName) {
 		name = animalName;
 		isHybrid = false;
+	}
+	// Method overloading example
+	public Zebra (string animalName, bool hybrid) {
+		name = animalName;
+		if(hybrid == true) {
+			isHybrid = true;
+			isFertile = false;
+		} else {
+			isHybrid = false;
+			isFertile = true;
+		}
 	}
 }
 
 class Donkey : Equus {
 	public string speciesName = "Donkey";
-	// CONSTRUCTOR
+	// Constructor
 	public Donkey (string animalName) {
 		name = animalName;
 		isHybrid = false;
@@ -180,6 +196,7 @@ class Mule : Equus {
 	public Mule (string animalName) {
 		name = animalName;
 		isHybrid = true;
+		isFertile = false;
 	}
 }
 
@@ -189,18 +206,14 @@ class Zedonk : Equus {
 	public Zedonk (string animalName) {
 		name = animalName;
 		isHybrid = true;
+		isFertile = false;
 	}
 }
 
 
-
-
-
-
-
-// Create animal instances
+// ANIMAL INSTANCES
 Horse mrEd = new Horse("Mr. Ed");
-Zebra stripey = new Zebra("Stripey");
+Zebra stripey = new Zebra("Stripey", false);
 Donkey eeyore = new Donkey("Eeyore");
 Mule stumpy = new Mule("Stumpy");
 Zedonk zippy = new Zedonk("Zippy");
@@ -218,8 +231,6 @@ Boylii steveFrench = new Boylii("Steve French");
 Chensinensis ricky = new Chensinensis("Ricky");
 
 
-
-
 // CONSOLE OUTPUT
 Console.WriteLine("");
 Console.WriteLine("~~~~~~~~~~~~~~~~");
@@ -232,6 +243,7 @@ Console.WriteLine("Genus: " + mrEd.genus);
 Console.WriteLine("Species: " + mrEd.speciesName);
 Console.WriteLine("Legs: " + mrEd.legs);
 Console.WriteLine("Hybrid: " + mrEd.isHybrid);
+Console.WriteLine("Fertile: " + mrEd.isFertile);
 Console.WriteLine("");
 
 Console.WriteLine("Name: " + stripey.name);
@@ -239,6 +251,7 @@ Console.WriteLine("Genus: " + stripey.genus);
 Console.WriteLine("Species: " + stripey.speciesName);
 Console.WriteLine("Legs: " + stripey.legs);
 Console.WriteLine("Hybrid: " + stripey.isHybrid);
+Console.WriteLine("Fertile: " + stripey.isFertile);
 Console.WriteLine("");
 
 Console.WriteLine("Name: " + eeyore.name);
@@ -246,6 +259,7 @@ Console.WriteLine("Genus: " + eeyore.genus);
 Console.WriteLine("Species: " + eeyore.speciesName);
 Console.WriteLine("Legs: " + eeyore.legs);
 Console.WriteLine("Hybrid: " + eeyore.isHybrid);
+Console.WriteLine("Fertile: " + eeyore.isFertile);
 Console.WriteLine("");
 
 Console.WriteLine("Name: " + stumpy.name);
@@ -253,6 +267,7 @@ Console.WriteLine("Genus: " + stumpy.genus);
 Console.WriteLine("Species: " + stumpy.speciesName);
 Console.WriteLine("Legs: " + stumpy.legs);
 Console.WriteLine("Hybrid: " + stumpy.isHybrid);
+Console.WriteLine("Fertile: " + stumpy.isFertile);
 Console.WriteLine("");
 
 Console.WriteLine("Name: " + zippy.name);
@@ -260,6 +275,7 @@ Console.WriteLine("Genus: " + zippy.genus);
 Console.WriteLine("Species: " + zippy.speciesName);
 Console.WriteLine("Legs: " + zippy.legs);
 Console.WriteLine("Hybrid: " + zippy.isHybrid);
+Console.WriteLine("Fertile: " + zippy.isFertile);
 Console.WriteLine("");
 
 Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~");
