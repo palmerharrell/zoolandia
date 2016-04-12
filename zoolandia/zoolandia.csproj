@@ -46,6 +46,7 @@
     <Compile Include="Animal.cs" />
     <Compile Include="Genus\Cricetulus.cs" />
     <Compile Include="Genus\Equus.cs" />
+    <Compile Include="Habitat.cs" />
     <Compile Include="IAnimal.cs" />
     <Compile Include="Species\Donkey.cs" />
     <Compile Include="Species\Horse.cs" />

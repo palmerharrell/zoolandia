@@ -13,6 +13,9 @@ namespace Zoolandia
     {
         static void Main(string[] args)
         {
+            Habitat savanna = new Habitat();
+            savanna.inhabitants = new List<Animal>();
+        
             // Animal larry = new Animal();
             // larry.name = args[0];
 
@@ -21,8 +24,16 @@ namespace Zoolandia
             Latastei marco = new Latastei("Marco");
             Iberica robert = new Iberica("Robert");
 
-            // CONSOLE OUTPUT
-            Console.WriteLine("Name: " + zippy.name);
+            savanna.inhabitants.Add(zippy);
+            savanna.inhabitants.Add(marco);
+
+            foreach (Animal a in savanna.inhabitants)
+            {
+              Console.WriteLine("List and foreach example: " + a.name);
+            }
+
+      // CONSOLE OUTPUT
+      Console.WriteLine("Name: " + zippy.name);
             Console.WriteLine("Genus: " + zippy.genus);
             Console.WriteLine("Species: " + zippy.speciesName);
             Console.WriteLine("Common Name: " + zippy.commonName);
