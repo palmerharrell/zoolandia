@@ -32,8 +32,8 @@ namespace Zoolandia
               Console.WriteLine("List and foreach example: " + a.name);
             }
 
-      // CONSOLE OUTPUT
-      Console.WriteLine("Name: " + zippy.name);
+            // CONSOLE OUTPUT
+            Console.WriteLine("Name: " + zippy.name);
             Console.WriteLine("Genus: " + zippy.genus);
             Console.WriteLine("Species: " + zippy.speciesName);
             Console.WriteLine("Common Name: " + zippy.commonName);
