@@ -22,7 +22,7 @@ namespace Zoolandia
             Iberica robert = new Iberica("Robert");
 
             // CONSOLE OUTPUT
-            Console.WriteLine("Name:: " + zippy.name);
+            Console.WriteLine("Name: " + zippy.name);
             Console.WriteLine("Genus: " + zippy.genus);
             Console.WriteLine("Species: " + zippy.speciesName);
             Console.WriteLine("Common Name: " + zippy.commonName);
