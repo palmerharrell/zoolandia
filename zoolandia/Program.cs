@@ -29,7 +29,7 @@ namespace zoolandia
       // CONSOLE OUTPUT
       foreach (Animal a in savanna.inhabitants)
       {
-        Console.WriteLine("List and foreach example: " + a.name);
+        Console.WriteLine("List/foreach example: " + a.name);
       }
     }
   }
