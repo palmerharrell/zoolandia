@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using Zoolandia.Genus;
-using Zoolandia.Species;
+using zoolandia.Species;
 
-namespace Zoolandia
+namespace zoolandia
 {
     
     class Program

@@ -47,7 +47,7 @@
     <Compile Include="Genus\Cricetulus.cs" />
     <Compile Include="Genus\Equus.cs" />
     <Compile Include="Habitat.cs" />
-    <Compile Include="IAnimal.cs" />
+    <Compile Include="Interfaces\IAnimal.cs" />
     <Compile Include="Species\Donkey.cs" />
     <Compile Include="Species\Horse.cs" />
     <Compile Include="Species\LongTailedDwarfHamster.cs" />

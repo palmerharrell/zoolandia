@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Zoolandia.Genus;
+using zoolandia.Genus;
 
-namespace Zoolandia.Species
+namespace zoolandia.Species
 {
   class TibetanHamster : Cricetulus
   {
