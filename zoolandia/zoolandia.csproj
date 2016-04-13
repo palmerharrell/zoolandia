@@ -66,6 +66,7 @@
     <Compile Include="Species\TibetanHamster.cs" />
     <Compile Include="Species\Zebra.cs" />
     <Compile Include="Species\Zedonk.cs" />
+    <Compile Include="Zoo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
