@@ -8,9 +8,9 @@ namespace zoolandia
 {
   class Employee
   {
-    public string firstName;
-    public string lastName;
-    public string role;
-    public double salary;
+    public string firstName = "";
+    public string lastName = "";
+    public string role = "";
+    public double salary = 0;
   }
 }
